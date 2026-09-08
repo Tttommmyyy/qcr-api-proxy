@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       const domain = req.query.domain;
       
       // 👉 NOTE: Update this URL inside Vercel Environment Variables or directly here once you have the Make.com URL
-      const bootWebhook = process.env.BOOT_WEBHOOK_URL || "YOUR_MAKE_BOOT_WEBHOOK_HERE";
+      const bootWebhook = "https://hook.eu2.make.com/wp6o7o74vq7aoxg649zsmx6pglqj8g7k";
       const makeBootWebhookUrl = `${bootWebhook}?client_id=${clientId}&domain=${domain}`;
       
       const makeResponse = await fetch(makeBootWebhookUrl);
