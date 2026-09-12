@@ -15,7 +15,6 @@ export default async function handler(req, res) {
       const clientId = req.query.client_id;
       const domain = req.query.domain;
       
-      // 👉 NOTE: Update this URL inside Vercel Environment Variables or directly here once you have the Make.com URL
       const bootWebhook = "https://hook.eu2.make.com/wp6o7o74vq7aoxg649zsmx6pglqj8g7k";
       const makeBootWebhookUrl = `${bootWebhook}?client_id=${clientId}&domain=${domain}`;
       
@@ -25,17 +24,35 @@ export default async function handler(req, res) {
       return res.status(makeResponse.status).json(data);
     }
 
-    // ---- EXISTING LOGIC: FORWARD ALL POST REQUESTS (RENDER & UPSCALE) ----
-    const makeResponse = await fetch("https://hook.eu2.make.com/qrygnwrae7n2w869ce143pikidjskdfi", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(req.body)
-    });
+    // ---- HANDLE POST REQUESTS (RENDER & UPSCALE) ----
+    if (req.method === 'POST') {
+      // Default to the original API Gateway Bouncer
+      let targetWebhook = "https://hook.eu2.make.com/qrygnwrae7n2w869ce143pikidjskdfi";
+      
+      // If the request comes specifically from the new UI Embed, route it to the Embed Bouncer
+      if (req.body && req.body.source === 'Embed') {
+        targetWebhook = "https://hook.eu2.make.com/yk3tb3g8dyy6c59jjxn9b8xfooylg7m6";
+      }
 
-    const makeData = await makeResponse.json();
-    return res.status(makeResponse.status).json(makeData);
+      const makeResponse = await fetch(targetWebhook, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(req.body)
+      });
+
+      // Safely parse the Make.com response (prevents 500 crashes if Make returns plain text)
+      const makeText = await makeResponse.text();
+      try {
+        const makeData = JSON.parse(makeText);
+        return res.status(makeResponse.status).json(makeData);
+      } catch (err) {
+        return res.status(makeResponse.status).send(makeText);
+      }
+    }
+
+    return res.status(400).json({ success: false, error: "Invalid Action" });
 
   } catch (error) {
     console.error("Proxy Error:", error);
