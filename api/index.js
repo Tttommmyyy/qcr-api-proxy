@@ -37,7 +37,8 @@ export default async function handler(req, res) {
       const makeResponse = await fetch(targetWebhook, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "x-make-apikey": process.env.MAKE_WEBHOOK_SECRET || ""
         },
         body: JSON.stringify(req.body)
       });
