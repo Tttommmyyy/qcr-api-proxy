@@ -18,7 +18,11 @@ export default async function handler(req, res) {
       const bootWebhook = "https://hook.eu2.make.com/wp6o7o74vq7aoxg649zsmx6pglqj8g7k";
       const makeBootWebhookUrl = `${bootWebhook}?client_id=${clientId}&domain=${domain}`;
       
-      const makeResponse = await fetch(makeBootWebhookUrl);
+      const makeResponse = await fetch(makeBootWebhookUrl, {
+        headers: {
+          "x-make-apikey": process.env.MAKE_WEBHOOK_SECRET || ""
+        }
+      });
       const data = await makeResponse.json();
       
       return res.status(makeResponse.status).json(data);
