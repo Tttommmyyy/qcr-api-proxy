@@ -23,9 +23,14 @@ export default async function handler(req, res) {
           "x-make-apikey": process.env.MAKE_WEBHOOK_SECRET || ""
         }
       });
-      const data = await makeResponse.json();
       
-      return res.status(makeResponse.status).json(data);
+      const makeText = await makeResponse.text();
+      try {
+        const data = JSON.parse(makeText);
+        return res.status(makeResponse.status).json(data);
+      } catch (err) {
+        return res.status(makeResponse.status).send(makeText);
+      }
     }
 
     // ---- HANDLE POST REQUESTS (RENDER & UPSCALE) ----
