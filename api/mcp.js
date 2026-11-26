@@ -82,7 +82,13 @@ Contact: hello@quickcabrender.com`,
 - API and embed: ${SITE}/api
 - API documentation: ${SITE}/api/documentation
 - Affiliate program: ${SITE}/partners
-- Contact: ${SITE}/contact or hello@quickcabrender.com`,
+- Contact: ${SITE}/contact or hello@quickcabrender.com
+- Instagram: https://www.instagram.com/quickcabrender/
+- YouTube: https://www.youtube.com/@QuickCabRender
+- LinkedIn: https://www.linkedin.com/company/quickcabrender/
+- Facebook: https://www.facebook.com/profile.php?id=61587034702401
+
+Founded in 2026 in Australia by Thomas Yencken.`,
   },
 };
 

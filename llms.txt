@@ -10,6 +10,8 @@ Key facts:
 - REST API and white-label iFrame embed for suppliers and software companies (from $49/month).
 - MCP server for AI assistants: https://api.quickcabrender.com/api/mcp
 - Contact: hello@quickcabrender.com
+- Founded 2026 in Australia by Thomas Yencken (Joinery Tech Pty Ltd).
+- Social: Instagram https://www.instagram.com/quickcabrender/ · YouTube https://www.youtube.com/@QuickCabRender · LinkedIn https://www.linkedin.com/company/quickcabrender/ · Facebook https://www.facebook.com/profile.php?id=61587034702401
 
 ## Main pages
 
