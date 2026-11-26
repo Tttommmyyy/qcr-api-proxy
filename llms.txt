@@ -1,0 +1,37 @@
+# QuickCabRender
+
+> QuickCabRender is a web-based AI rendering tool for cabinetmakers, joiners, kitchen designers and interior designers. Take a screenshot of the 3D view from any CAD program (Mozaik, Cabinet Vision, Microvellum, SketchUp, 2020 Design, Fusion 360, PolyBoard) or a hand sketch, drag it into the browser, and get a photorealistic render in about 40 seconds. No plugin, install or 3D file export needed.
+
+Key facts:
+- Built to stay faithful to the drawing: cabinet runs, doors, drawers, windows and openings stay where they were drawn.
+- Exact Material Matching: paste a manufacturer's swatch or handle image to apply that exact board, paint, stone or hardware.
+- 4K upscaling, an edit tool (change, add or remove an item), and saved settings templates.
+- Pricing (USD): 7-day free trial; Starter $19/month (50 credits); Business $49/month (200 credits, 4K, swatch matching, 2 seats); Pro $199/month (1,000 credits, 5 seats). Top-ups: 15 credits $25, 100 credits $90. 1 credit = 1 render. Failed renders are not charged.
+- REST API and white-label iFrame embed for suppliers and software companies (from $49/month).
+- MCP server for AI assistants: https://api.quickcabrender.com/api/mcp
+- Contact: hello@quickcabrender.com
+
+## Main pages
+
+- [Home](https://www.quickcabrender.com/): Product overview, demo, features, FAQ and pricing.
+- [Pricing](https://www.quickcabrender.com/pricing): Plans, credits, top-ups and free trial.
+- [API & Embed](https://www.quickcabrender.com/api): Add QuickCabRender rendering to your own website or app.
+- [API documentation](https://www.quickcabrender.com/api/documentation): Authentication, request format, colors, door profiles and response examples.
+- [Affiliate program](https://www.quickcabrender.com/partners): Commission for referring cabinetmakers and designers.
+- [Contact](https://www.quickcabrender.com/contact): Sales, enterprise and integration enquiries.
+
+## Guides and comparisons
+
+- [QuickCabRender vs Mozaik AI Rendering](https://www.quickcabrender.com/blog/quickcabrender-vs-mozaik-ai-rendering): Price, workflow and materials compared, and which shops each suits.
+- [The Best AI Rendering Tools for Cabinetmakers in 2026](https://www.quickcabrender.com/blog/best-ai-rendering-tools-for-cabinetmakers): Built-in CAD options, browser tools and services compared.
+- [Photoreal renders from Cabinet Vision, Microvellum, 2020 or SketchUp](https://www.quickcabrender.com/blog/photoreal-renders-from-cabinet-vision-microvellum-2020-sketchup): Step-by-step screenshot-to-render workflow.
+- [Love Mozaik, Hate the Render?](https://www.quickcabrender.com/blog/love-mozaik-hate-the-render): Photoreal visuals from Mozaik without plugins.
+- [From SketchUp to Photoreal in 20 Seconds](https://www.quickcabrender.com/blog/from-sketchup-to-photoreal-in-20-seconds): The fast workflow for busy designers.
+- [Why We Built a Rendering Tool That Doesn't Care What Software You Use](https://www.quickcabrender.com/blog/why-we-built-a-rendering-tool): The story behind QuickCabRender.
+- [The Visualization Gap](https://www.quickcabrender.com/blog/the-visualization-gap): Why clients can't read floor plans, and how to fix it.
+- [Stop Guessing the Sale](https://www.quickcabrender.com/blog/stop-guessing-the-sale): How visuals help close jobs faster.
+
+## Optional
+
+- [Blog](https://www.quickcabrender.com/blog): All articles.
+- [Legal & Privacy](https://www.quickcabrender.com/legal): Terms of service and privacy policy.
